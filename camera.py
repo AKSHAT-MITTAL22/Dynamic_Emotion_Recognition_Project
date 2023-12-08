@@ -19,8 +19,8 @@ sheet.append(header)
 
 class VideoCamera(object):
     def __init__(self):
-        #self.video = cv2.VideoCapture("C:/Users/Akshat Mittal/OneDrive/Desktop/presidential_debate.mp4")
-        self.video = cv2.VideoCapture(0)
+        self.video = cv2.VideoCapture("presidential_debate.mp4")
+        #self.video = cv2.VideoCapture(0)
 
     def __del__(self):
         self.video.release()
