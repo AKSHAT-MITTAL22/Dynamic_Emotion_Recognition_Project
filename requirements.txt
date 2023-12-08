@@ -1,4 +1,4 @@
---upgrade pip
+pip==23.3.1
 absl-py==1.4.0
 appdirs==1.4.4
 array-record==0.4.1
