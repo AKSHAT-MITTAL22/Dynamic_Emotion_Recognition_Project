@@ -27,7 +27,6 @@ pgmpy==0.1.24
 PyQt5==5.15.7
 PyQtWebEngine==5.15.4
 python-lsp-jsonrpc==1.0.0
-pywin32==305.1
 retina-face==0.0.13
 rsa==4.9
 scikit-learn-intelex==20230426.121932
