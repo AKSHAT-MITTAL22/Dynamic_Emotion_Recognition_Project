@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facial Expression Recognition</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #bg {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #0074d9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Emotion Recognition</h1>
+    <img id="bg" width="600px" height="600px" src="{{url_for('video_feed')}}">
+    <br>
+    <button id="stopButton", color:'red'>Stop</button>
+
+    <script>
+        // Function to stop the command prompt by sending Ctrl+C
+        document.getElementById("stopButton").addEventListener("click", function() {
+            // Send Ctrl+C using JavaScript (this won't work in all cases, depending on the environment)
+            fetch('/send_ctrl_c', { method: 'GET' })
+                .then(response => response.text())
+                .then(result => {
+                    console.log(result);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        });
+    </script>
+</body>
+</html>

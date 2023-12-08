@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facial Expression Recognition</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #bg {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #0074d9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #stopButton{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Emotion Recognition</h1>
+    <img id="bg" width="600px" height="600px" src="{{url_for('video_feed')}}">
+    <br>
+    <button id="stopButton">Stop</button>
+
+    <script>
+        
+        // Function to stop the execution
+        document.getElementById("stopButton").addEventListener("click", function() {
+            // Send a POST request to the /shutdown endpoint
+            fetch('/shutdown', { method: 'POST' })
+                .then(response => response.text())
+                .then(message => console.log(message))
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
