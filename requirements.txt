@@ -35,7 +35,6 @@ tensorboard-data-server==0.7.1
 tensorflow==2.13.0
 tensorflow-datasets==4.9.2
 tensorflow-estimator==2.13.0
-tensorflow-intel==2.13.0
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.3.0
 torch==2.1.1
