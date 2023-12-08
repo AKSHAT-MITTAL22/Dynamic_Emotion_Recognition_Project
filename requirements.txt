@@ -19,7 +19,6 @@ kt-legacy==1.0.5
 livelossplot==0.5.5
 mtcnn==0.1.1
 mypy-extensions==0.4.3
-navigator-updater==0.4.0
 opencv-contrib-python==4.8.0.76
 opencv-python==4.8.0.76
 opendatasets==0.1.22
