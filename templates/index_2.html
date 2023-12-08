@@ -30,6 +30,11 @@
         #stopButton{
             background-color: red;
         }
+        #video {
+            width: 600px;
+            height: 450px;
+            display: none; /* Initially hide the video element */
+        }
     </style>
 </head>
 <body>
@@ -37,8 +42,21 @@
     <img id="bg" width="600px" height="600px" src="{{url_for('video_feed')}}">
     <br>
     <button id="stopButton">Stop</button>
+    <video id="video" width="600px" height="450px" autoplay></video>
 
     <script>
+        const video = document.getElementById('video');
+
+        // Function to start the camera
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+                video.style.display = 'block';  // Show the video element
+            } catch (error) {
+                console.error('Error accessing camera:', error);
+            }
+        }
         
         // Function to stop the execution
         document.getElementById("stopButton").addEventListener("click", function() {
