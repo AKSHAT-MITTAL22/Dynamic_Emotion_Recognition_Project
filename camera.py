@@ -19,13 +19,12 @@ sheet.append(header)
 
 class VideoCamera(object):
     def __init__(self):
-        self.video = cv2.VideoCapture("presidential_debate.mp4")
-        #self.video = cv2.VideoCapture(0)
+        self.video = cv2.VideoCapture(0)
 
     def __del__(self):
         self.video.release()
 
-    # returns camera frames along with bounding boxes and predictions
+    #Returns camera frames along with bounding boxes and predictions
     def get_frame(self):
         while True:
             _, fr = self.video.read()

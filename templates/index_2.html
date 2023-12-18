@@ -5,7 +5,7 @@
     <style>
         body {
             text-align: center;
-            background-color: #f2f2f2;
+            background-color: #c5b8b8e3;
             margin: 0;
             padding: 0;
         }
@@ -30,34 +30,22 @@
         #stopButton{
             background-color: red;
         }
-        #video {
-            width: 600px;
-            height: 450px;
-            display: none; /* Initially hide the video element */
-        }
     </style>
 </head>
 <body>
     <h1>Face Emotion Recognition</h1>
-    <img id="bg" width="600px" height="600px" src="{{url_for('video_feed')}}">
+    <img id="bg" width="600px" height="600px" src="https://drive.google.com/uc?id=1rRJTni_4wUm4mWfaeII4OpAIiAMeJoJE" alt="Default Image">
     <br>
+    <button id="startButton">Start</button>
     <button id="stopButton">Stop</button>
-    <video id="video" width="600px" height="450px" autoplay></video>
 
     <script>
-        const video = document.getElementById('video');
+        // Function to start the camera feed
+        document.getElementById("startButton").addEventListener("click", function() {
+            // Change the source of the image to the video feed when starting
+            document.getElementById("bg").src = "{{url_for('video_feed')}}";
+        });
 
-        // Function to start the camera
-        async function startCamera() {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                video.srcObject = stream;
-                video.style.display = 'block';  // Show the video element
-            } catch (error) {
-                console.error('Error accessing camera:', error);
-            }
-        }
-        
         // Function to stop the execution
         document.getElementById("stopButton").addEventListener("click", function() {
             // Send a POST request to the /shutdown endpoint
@@ -65,6 +53,9 @@
                 .then(response => response.text())
                 .then(message => console.log(message))
                 .catch(error => console.error('Error:', error));
+            document.getElementById("bg").src = "https://drive.google.com/uc?id=1rRJTni_4wUm4mWfaeII4OpAIiAMeJoJE";
+
+            
         });
     </script>
 </body>
