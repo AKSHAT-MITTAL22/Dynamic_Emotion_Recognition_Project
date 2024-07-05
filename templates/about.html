@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>404 - Not Found</title>
+    <title>About - DER Project</title>
+    <meta property="og:title" content="About - DER Project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -731,23 +732,482 @@
   <body>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <div>
-      <link href="{{ url_for('static', filename='css/404.css') }}" rel="stylesheet" />
+      <link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet" />
 
-      <div class="not-found-container">
-        <h3>OOPS! PAGE NOT FOUND</h3>
-        <div class="not-found-container1">
-          <h1 class="not-found-text1">404</h1>
+      <div class="about-container">
+        <div class="about-header">
+          <header
+            data-thq="thq-navbar"
+            class="about-navbar-interactive navbarContainer"
+          >
+            <span class="logo">EMOTIONX</span>
+            <div data-thq="thq-navbar-nav" class="about-desktop-menu">
+              <nav class="about-links">
+                <a href="{{url_for('home1')}}" class="about-nav12 bodySmall buttonFilled">
+                  Home
+                </a>
+                <span class="about-nav42 bodySmall buttonFilled">
+                  Face Recognition
+                </span>
+                <a
+                  href="{{url_for('speech_emotion')}}"
+                  class="about-nav52 bodySmall buttonFilled"
+                >
+                  Speech Recognition
+                </a>
+                <a href="{{url_for('team')}}" class="about-nav32 bodySmall buttonFilled">
+                  Team
+                </a>
+                <a href="{{url_for('about')}}" class="about-nav22 bodySmall buttonFilled">
+                  About
+                </a>
+              </nav>
+            </div>
+            <div data-thq="thq-burger-menu" class="about-burger-menu">
+              <nav class="about-links1">
+                <a
+                  href="{{url_for('home1')}}"
+                  class="about-nav121 bodySmall buttonFilled"
+                >
+                  Home
+                </a>
+                <a href="{{url_for('face_emotion')}}" class="about-nav421 bodySmall buttonFilled">
+                  Face Recognition
+                </a>
+                <a
+                  href="{{url_for('speech_emotion')}}"
+                  class="about-nav521 bodySmall buttonFilled"
+                >
+                  Speech Recognition
+                </a>
+                <a href="{{url_for('team')}}" class="about-nav321 bodySmall buttonFilled">
+                  Team
+                </a>
+                <a
+                  href="{{url_for('about')}}"
+                  class="about-nav221 bodySmall buttonFilled"
+                >
+                  About
+                </a>
+              </nav>
+            </div>
+            <div
+              data-thq="thq-mobile-menu"
+              class="about-mobile-menu1 mobileMenu"
+            >
+              <nav class="about-links2">
+                <a
+                  href="{{url_for('home1')}}"
+                  class="about-nav122 bodySmall buttonFilled"
+                >
+                  Home
+                </a>
+                <span class="about-nav422 bodySmall buttonFilled">
+                  Face Recognition
+                </span>
+                <a
+                  href="{{url_for('speech_emotion')}}"
+                  class="about-nav522 bodySmall buttonFilled"
+                >
+                  Speech Recognition
+                </a>
+                <a href="{{url_for('team')}}" class="about-nav322 buttonFilled bodySmall">
+                  Team
+                </a>
+                <a
+                  href="{{url_for('about')}}"
+                  class="about-nav222 buttonFilled bodySmall"
+                >
+                  About
+                </a>
+              </nav>
+            </div>
+          </header>
         </div>
-        <div class="not-found-container2">
-          <h2 class="not-found-text2">
-            WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND
-          </h2>
+        <div class="about-welcome">
+          <div class="about-hero heroContainer">
+            <h1 class="about-hero-heading heading1">
+              Welcome to Our Dynamic Emotion Recognition System
+            </h1>
+            <h3 class="about-text">
+              (Empowering AI to Understand Human Emotions)
+            </h3>
+          </div>
         </div>
+        <div class="about-details featuresContainer">
+          <h1 class="about-about-us">
+            <span>About Us</span>
+            <br />
+          </h1>
+          <span class="about-text03">
+            <span>
+              At EMOTIONX, we're passionate about harnessing the power of
+              technology to understand human emotions better. Our dynamic
+              emotion recognition system is designed to analyze and interpret
+              emotions through facial expressions and speech patterns, bringing
+              a new level of insight into the emotional landscape of human
+              interactions.&nbsp;Our team, comprised of experts in artificial
+              intelligence, Deep Learning, and user experience design, is
+              dedicated to understanding the subtle nuances of human emotions
+              and translating that understanding into advanced technological
+              solutions.
+            </span>
+            <span></span>
+            <span></span>
+          </span>
+          <div class="about-separator"></div>
+          <h1 class="about-mission">Our Mission</h1>
+          <span class="about-text07">
+            <span class="about-text08">
+              Our core mission is to revolutionize the way emotions are
+              understood and interpreted through technology. In a world where
+              digital communication continues to expand, the need for empathy
+              and emotional awareness has never been more critical. Our dynamic
+              emotion recognition system represents a leap forward in bridging
+              the gap between human emotions and technological innovation.
+            </span>
+            <br class="about-text09" />
+            <br class="about-text10" />
+            <span class="about-text11">
+              We are dedicated to enhancing communication across various
+              sectors, including healthcare, education, customer service, and
+              personal technology, by providing tools that recognize and respond
+              to human emotions in a nuanced and empathetic manner. By
+              integrating advanced AI and machine learning techniques with a
+              deep understanding of emotional intelligence, we aim to create a
+              future where technology supports more meaningful human
+              interaction, fosters deeper connections, and promotes well-being
+              in an increasingly digital world.
+            </span>
+            <br class="about-text12" />
+            <br class="about-text13" />
+            <span class="about-text14">
+              Our commitment extends beyond technological advancement to ethical
+              responsibility. We prioritize the privacy and security of all
+              individuals, ensuring that our systems are designed with the
+              utmost respect for personal data and consent. Through continuous
+              research, development, and collaboration, EmotionX aspires to set
+              new standards for emotional recognition technology, making it more
+              accessible, accurate, and aligned with human values.
+            </span>
+            <span></span>
+            <span></span>
+          </span>
+          <div class="about-separator1"></div>
+          <h1 class="about-how">
+            <span>How it works?</span>
+            <br />
+          </h1>
+          <span class="about-text19">
+            <span>
+              EMOTIONX leverages the latest advancements in artificial
+              intelligence (AI) and machine learning (ML) to provide a
+              state-of-the-art emotion recognition system. Our technology
+              analyzes both facial expressions and speech patterns to accurately
+              identify and interpret a wide range of human emotions.
+            </span>
+            <br />
+            <br />
+            <span>Here’s how our system works:</span>
+            <br />
+            <br />
+            <span class="about-text26">1. Facial Expression Analysis:</span>
+            <span>
+              Using advanced computer vision techniques, platform scans the
+              user's facial expressions in real-time. The system interprets
+              subtle facial movements and micro-expressions, mapping them to
+              specific emotions based on a comprehensive database of emotional
+              indicators.
+            </span>
+            <br />
+            <br />
+            <span class="about-text30">2. Speech Pattern Recognition:</span>
+            <span>
+              Parallel to visual analysis, our system listens to the user's
+              voice, assessing tone, pitch, speed, and language use.
+              Sophisticated algorithms analyze these speech characteristics to
+              determine the speaker's emotional state, considering the context
+              and cultural nuances.
+            </span>
+            <br />
+            <br />
+            <span class="about-text34">3. Integration and Interpretation:</span>
+            <span>
+              The insights gathered from both facial and speech analysis are
+              integrated to form a cohesive understanding of the user's
+              emotional state. This dual-input approach allows for a more
+              accurate and nuanced recognition of emotions, even in complex or
+              mixed emotional scenarios.
+            </span>
+            <br />
+            <br />
+            <span class="about-text38">
+              4. Real-Time Feedback and Application:
+            </span>
+            <span>
+              EMOTIONX provides immediate feedback on the emotional analysis,
+              which can be used in various applications, from enhancing customer
+              service interactions to supporting mental health assessments. The
+              system's versatility makes it suitable for a wide range of
+              sectors, including healthcare, education, entertainment, and
+              customer relations.
+            </span>
+            <br />
+            <br />
+            <span>
+              Our commitment to innovation drives continuous improvement of our
+              algorithms, ensuring that EMOTIONX remains at the forefront of
+              emotion recognition technology. By harnessing the power of AI and
+              DL, we aim to create a more empathetic and understanding world,
+              where technology bridges the gap between human emotions and
+              digital communication.
+            </span>
+            <span></span>
+            <span></span>
+          </span>
+          <div class="about-separator2"></div>
+          <h1 class="about-datasets">
+            <span>Datasets Used</span>
+            <br />
+          </h1>
+          <span class="about-text47">Face Emotion Recognition Dataset</span>
+          <span class="about-text48">
+            For facial emotion recognition, we utilize:
+          </span>
+          <ul class="about-ul list">
+            <li class="about-li list-item">
+              <span>
+                FER (Facial Expression Recognition): A dataset that includes
+                images categorized into several emotions, providing a
+                foundational basis for our facial analysis algorithms.
+              </span>
+            </li>
+          </ul>
+          <span class="about-text50">Speech Emotion Recognition Datasets</span>
+          <span class="about-text51">
+            Our system's speech recognition capabilities are powered by four key
+            datasets:
+          </span>
+          <ul class="about-ul1 list">
+            <li class="about-li1 list-item">
+              <span>
+                RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and
+                Song): A collection of audio and video emotional expressions in
+                English.
+              </span>
+            </li>
+            <li class="about-li2 list-item">
+              <span>
+                TESS (Toronto Emotional Speech Set): Features emotional
+                sentences spoken by actors, offering a wide range of emotions.
+              </span>
+            </li>
+            <li class="about-li3 list-item">
+              <span>
+                SAVEE (Surrey Audio-Visual Expressed Emotion): Contains
+                audio-visual clips of male actors expressing different emotions.
+              </span>
+            </li>
+            <li class="about-li4 list-item">
+              <span>
+                CREMA-D (Crowd-sourced Emotional Multimodal Actors Dataset):
+                Offers a rich set of emotional speech and facial expressions in
+                English.
+              </span>
+            </li>
+          </ul>
+          <span class="about-text56">
+            These datasets are instrumental in training our system to understand
+            and interpret a diverse range of emotional expressions accurately.
+          </span>
+          <div class="about-separator3"></div>
+          <h1 class="about-privacy">
+            <span>Privacy and Ethics</span>
+            <br />
+          </h1>
+          <span class="about-text59">
+            At EMOTIONX, we place a strong emphasis on upholding the highest
+            standards of privacy and ethics throughout our system. Our
+            state-of-the-art technology is carefully designed to protect user
+            data and maintain confidentiality, adhering to strict compliance
+            with global data privacy laws and regulations.
+          </span>
+        </div>
+        <div class="about-feedback featuresContainer">
+          <h1 class="about-privacy1">Feedback Form</h1>
+          <span class="about-text60">
+            We value your feedback as it helps us enhance our services and grow.
+            Whether you have had a great experience with EMOTIONX or have ideas
+            on how we can improve, we are eager to listen to you.
+          </span>
+          <form
+            id="feedbackForm"
+            enctype="multipart/form-data"
+            autocomplete="on"
+            class="about-form"
+          >
+            <div class="about-container01">
+              <span class="about-text61">Full Name:</span>
+              <input
+                type="text"
+                id="name"
+                required="true"
+                autocomplete="name"
+                class="about-textinput input"
+              />
+            </div>
+            <div class="about-container02">
+              <label class="about-text62">Email ID:</label>
+              <input
+                type="email"
+                id="email"
+                required="true"
+                autocomplete="email"
+                class="about-textinput1 input"
+              />
+            </div>
+            <div class="about-container03">
+              <label class="about-text63">Contact No.:</label>
+              <input
+                type="tel"
+                id="phone"
+                required="true"
+                autocomplete="off"
+                class="about-textinput2 input"
+              />
+            </div>
+            <div class="about-container04">
+              <label class="about-text64">Type of Feedback:</label>
+              <select id="option" required="true" class="about-select">
+                <option value="Experience">Experience</option>
+                <option value="Suggestion">Suggestion</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+            <div class="about-container05">
+              <label class="about-text65">Share Your Experience:</label>
+              <textarea
+                id="message"
+                cols="30"
+                rows="4"
+                class="textarea"
+              ></textarea>
+            </div>
+            <button id="submitForm" type="button" class="about-button button">
+              Submit
+            </button>
+          </form>
+        </div>
+        <footer class="about-footer footerContainer">
+          <div class="about-container06"></div>
+          <span class="about-logo1 logo">EMOTIONX</span>
+          <nav class="about-nav">
+            <a href="{{url_for('home1')}}" class="about-navlink">Home</a>
+            <a href="{{url_for('face_emotion')}}" class="about-navlink1">Face Recogniton</a>
+            <a href="{{url_for('speech_emotion')}}" class="about-navlink2">Speech Recognition</a>
+            <a href="{{url_for('team')}}" class="about-navlink3">Team</a>
+            <a href="{{url_for('about')}}" class="about-navlink4">About</a>
+          </nav>
+          <div class="about-contact">
+            <span class="about-text66">Contact Us:-</span>
+            <span class="about-text67">emotionx.piet@gmail.com</span>
+          </div>
+          <div class="about-separator4"></div>
+          <div class="about-container07">
+            <span class="about-text68 bodySmall">
+              © 2024 AK Productions, All Rights Reserved.
+            </span>
+            <div class="about-container08">
+              <div class="about-container09">
+                <a
+                  href="https://www.linkedin.com/in/akshat2223"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="about-link"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="about-icon">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/karishmajain124"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="about-link1"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="about-icon2">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/mehak-goel-265184228"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="about-link2"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="about-icon4">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/drishti-sharma-bb69a722b"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="about-link3"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="about-icon6">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="about-container10">
+            <span class="about-text69">Akshat</span>
+            <span class="about-text70">Karishma</span>
+            <span class="about-text71">Mehak</span>
+            <span class="about-text72">Drishti</span>
+          </div>
+        </footer>
+        <div class="about-footer1"></div>
       </div>
     </div>
     <script
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#submitForm').click(function(e) {
+          e.preventDefault();
+          $.ajax({
+            url: '/sendFeedback',
+            method: 'POST',
+            data: {
+              name: $('#name').val(),
+              email: $('#email').val(),
+              phone: $('#phone').val(),
+              option: $('#option').val(),
+              message: $('#message').val()
+            },
+            success: function(response) {
+              alert('Feedback sent successfully');
+            },
+            error: function(xhr) {
+              alert('Error: ' + xhr.statusText);
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

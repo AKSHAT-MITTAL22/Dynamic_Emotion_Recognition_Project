@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>404 - Not Found</title>
+    <title>Face - DER Project</title>
+    <meta property="og:title" content="Face - DER Project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -731,23 +732,244 @@
   <body>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <div>
-      <link href="{{ url_for('static', filename='css/404.css') }}" rel="stylesheet" />
+      <link href="{{ url_for('static', filename='css/face.css') }}" rel="stylesheet" />
 
-      <div class="not-found-container">
-        <h3>OOPS! PAGE NOT FOUND</h3>
-        <div class="not-found-container1">
-          <h1 class="not-found-text1">404</h1>
+      <div class="face-container">
+        <div class="face-header">
+          <header
+            data-thq="thq-navbar"
+            class="face-navbar-interactive navbarContainer"
+          >
+            <span class="logo">EMOTIONX</span>
+            <div data-thq="thq-navbar-nav" class="face-desktop-menu">
+              <nav class="face-links">
+                <a href="{{url_for('home1')}}" class="face-nav12 bodySmall buttonFilled">
+                  Home
+                </a>
+                <span class="face-nav42 buttonFilled bodySmall">
+                  Face Recognition
+                </span>
+                <a href="{{url_for('speech_emotion')}}" class="face-nav52 buttonFilled bodySmall">
+                  Speech Recognition
+                </a>
+                <a href="{{url_for('team')}}" class="face-nav32 bodySmall buttonFilled">
+                  Team
+                </a>
+                <a href="{{url_for('about')}}" class="face-nav22 bodySmall buttonFilled">
+                  About
+                </a>
+              </nav>
+            </div>
+            <div data-thq="thq-burger-menu" class="face-burger-menu">
+              <nav class="face-links1">
+                <a href="{{url_for('home1')}}" class="face-nav121 bodySmall buttonFilled">
+                  Home
+                </a>
+                <a href="{{url_for('face_emotion')}}" class="face-nav421 bodySmall buttonFilled">
+                  Face Recognition
+                </a>
+                <a
+                  href="{{url_for('speech_emotion')}}"
+                  class="face-nav521 bodySmall buttonFilled"
+                >
+                  Speech Recognition
+                </a>
+                <a href="{{url_for('team')}}" class="face-nav321 bodySmall buttonFilled">
+                  Team
+                </a>
+                <a href="{{url_for('about')}}" class="face-nav221 buttonFilled bodySmall">
+                  About
+                </a>
+              </nav>
+            </div>
+            <div
+              data-thq="thq-mobile-menu"
+              class="face-mobile-menu1 mobileMenu"
+            >
+              <nav class="face-links2">
+                <a href="{{url_for('home1')}}" class="face-nav122 bodySmall buttonFilled">
+                  Home
+                </a>
+                <span class="face-nav422 bodySmall buttonFilled">
+                  Face Recognition
+                </span>
+                <a
+                  href="{{url_for('speech_emotion')}}"
+                  class="face-nav522 bodySmall buttonFilled"
+                >
+                  Speech Recognition
+                </a>
+                <a href="{{url_for('team')}}" class="face-nav322 bodySmall buttonFilled">
+                  Team
+                </a>
+                <a href="{{url_for('about')}}" class="face-nav222 bodySmall buttonFilled">
+                  About
+                </a>
+              </nav>
+            </div>
+          </header>
         </div>
-        <div class="not-found-container2">
-          <h2 class="not-found-text2">
-            WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND
-          </h2>
+        <div class="face-header1 heroContainer">
+          <div class="face-container01">
+            <h1 class="face-hero-heading heading1">Face Emotion Recognition</h1>
+          </div>
         </div>
+        <div class="face-header2 heroContainer">
+          <div class="face-container02">
+            <h1 class="face-hero-heading1 heading1">
+              Face Emotion Recognition
+            </h1>
+          </div>
+        </div>
+        <div class="face-container03">
+          <div class="face-container04">
+            <img
+              id="camFeed"
+              alt="image"
+              src="static/public/external/facial-400h.webp"
+              loading="eager"
+              class="face-image"
+            />
+            <div class="face-container05">
+              <button id="startButton" type="button" class="face-button button">
+                Start
+              </button>
+              <button id="stopButton" type="button" class="face-button1 button">
+                Pause
+              </button>
+            </div>
+            <button id="predButton" type="button" class="face-button2 button">
+              <span class="face-text">
+                <span>Stop&nbsp;</span>
+                <span>and</span>
+                <br />
+                <span>Download Results</span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <form action="/download" method="post" style="display: none;" id="downloadForm">
+            <input type="submit" value="Download">
+        </form>
+        <div class="face-container06"></div>
+        <footer class="face-footer footerContainer">
+          <div class="face-container07"></div>
+          <span class="face-logo1 logo">EMOTIONX</span>
+          <nav class="face-nav">
+            <a href="{{url_for('home1')}}" class="face-navlink">Home</a>
+            <a href="{{url_for('face_emotion')}}" class="face-navlink1">Face Recogniton</a>
+            <a href="{{url_for('speech_emotion')}}" class="face-navlink2">Speech Recognition</a>
+            <a href="{{url_for('team')}}" class="face-navlink3">Team</a>
+            <a href="{{url_for('about')}}" class="face-navlink4">About</a>
+          </nav>
+          <div class="face-contact">
+            <span class="face-text05">Contact Us:-</span>
+            <span class="face-text06">emotionx.piet@gmail.com</span>
+          </div>
+          <div class="face-separator"></div>
+          <div class="face-container08">
+            <span class="face-text07 bodySmall">
+              © 2024 AK Productions, All Rights Reserved.
+            </span>
+            <div class="face-container09">
+              <div class="face-container10">
+                <a
+                  href="https://www.linkedin.com/in/akshat2223"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="face-link"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="face-icon">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/karishmajain124"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="face-link1"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="face-icon2">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/mehak-goel-265184228"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="face-link2"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="face-icon4">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/drishti-sharma-bb69a722b"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="face-link3"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="face-icon6">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="face-container11">
+            <span class="face-text08">Akshat</span>
+            <span class="face-text09">Karishma</span>
+            <span class="face-text10">Mehak</span>
+            <span class="face-text11">Drishti</span>
+          </div>
+        </footer>
       </div>
     </div>
     <script
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+    <script>
+		// Add your JavaScript code here
+		const startbutton = document.getElementById("startButton");
+		const stopbutton = document.getElementById("stopButton");
+    const predbutton = document.getElementById("predButton");
+    const camera = document.getElementById("camFeed");
+    const res = document.getElementById("downloadForm");
+
+		startButton.addEventListener("click", function() {
+			camera.src = "{{url_for('video_feed')}}";
+		});
+
+    stopButton.addEventListener("click", function() {
+			camera.src = "static/public/external/facial-400w.webp";
+		});
+
+    predButton.addEventListener("click", function() {
+            fetch('/download',{method:'POST'})
+                .then(response => response.blob())
+                .then(blob=> {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = 'emotions_results.xlsx';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+	</script>
   </body>
 </html>

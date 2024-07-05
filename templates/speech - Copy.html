@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>404 - Not Found</title>
+    <title>Speech - DER Project</title>
+    <meta property="og:title" content="Speech - DER Project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -731,18 +732,197 @@
   <body>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <div>
-      <link href="{{ url_for('static', filename='css/404.css') }}" rel="stylesheet" />
+      <link href="{{ url_for('static', filename='css/speech.css') }}" rel="stylesheet" />
 
-      <div class="not-found-container">
-        <h3>OOPS! PAGE NOT FOUND</h3>
-        <div class="not-found-container1">
-          <h1 class="not-found-text1">404</h1>
+      <div class="speech-container">
+        <header
+          data-thq="thq-navbar"
+          class="speech-navbar-interactive navbarContainer"
+        >
+          <span class="logo">EMOTIONX</span>
+          <div data-thq="thq-navbar-nav" class="speech-desktop-menu">
+            <nav class="speech-links">
+              <a href="index.html" class="speech-nav12 bodySmall buttonFilled">
+                Home
+              </a>
+              <span class="speech-nav42 bodySmall buttonFilled">
+                Face Recognition
+              </span>
+              <a href="speech.html" class="speech-nav52 buttonFilled bodySmall">
+                Speech Recognition
+              </a>
+              <a href="team.html" class="speech-nav32 bodySmall buttonFilled">
+                Team
+              </a>
+              <a href="about.html" class="speech-nav22 bodySmall buttonFilled">
+                About
+              </a>
+            </nav>
+          </div>
+          <div data-thq="thq-burger-menu" class="speech-burger-menu">
+            <nav class="speech-links1">
+              <a href="index.html" class="speech-nav121 buttonFilled bodySmall">
+                Home
+              </a>
+              <a href="face.html" class="speech-nav421 bodySmall buttonFilled">
+                Face Recognition
+              </a>
+              <a
+                href="speech.html"
+                class="speech-nav521 buttonFilled bodySmall"
+              >
+                Speech Recognition
+              </a>
+              <a href="team.html" class="speech-nav321 bodySmall buttonFilled">
+                Team
+              </a>
+              <a href="about.html" class="speech-nav221 bodySmall buttonFilled">
+                About
+              </a>
+            </nav>
+          </div>
+          <div
+            data-thq="thq-mobile-menu"
+            class="speech-mobile-menu1 mobileMenu"
+          >
+            <nav class="speech-links2">
+              <a href="index.html" class="speech-nav122 bodySmall buttonFilled">
+                Home
+              </a>
+              <span class="speech-nav422 bodySmall buttonFilled">
+                Face Recognition
+              </span>
+              <a
+                href="speech.html"
+                class="speech-nav522 bodySmall buttonFilled"
+              >
+                Speech Recognition
+              </a>
+              <a href="team.html" class="speech-nav322 bodySmall buttonFilled">
+                Team
+              </a>
+              <a href="about.html" class="speech-nav222 bodySmall buttonFilled">
+                About
+              </a>
+            </nav>
+          </div>
+        </header>
+        <div class="speech-hero heroContainer">
+          <div class="speech-container01">
+            <h1 class="speech-hero-heading heading1">
+              Speech Emotion Recognition
+            </h1>
+          </div>
         </div>
-        <div class="not-found-container2">
-          <h2 class="not-found-text2">
-            WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND
-          </h2>
+        <div class="speech-container02">
+          <img
+            alt="image"
+            src="static/public/external/voice-300h.webp"
+            loading="eager"
+            class="speech-image"
+          />
         </div>
+        <div class="speech-container03">
+          <div class="speech-container04">
+            <button id="startRec" type="button" class="speech-button button">
+              Record
+            </button>
+            <button id="stopRec" type="button" class="speech-button1 button">
+              Stop
+            </button>
+            <button id="pred" type="button" class="speech-button2 button">
+              Predict Emotion
+            </button>
+          </div>
+        </div>
+        <footer class="speech-footer footerContainer">
+          <div class="speech-container05"></div>
+          <span class="speech-logo1 logo">EMOTIONX</span>
+          <nav class="speech-nav">
+            <a href="index.html" class="speech-navlink">Home</a>
+            <a href="face.html" class="speech-navlink1">Face Recogniton</a>
+            <a href="speech.html" class="speech-navlink2">Speech Recognition</a>
+            <a href="team.html" class="speech-navlink3">Team</a>
+            <a href="about.html" class="speech-navlink4">About</a>
+          </nav>
+          <div class="speech-contact">
+            <span class="speech-text">Contact Us:-</span>
+            <span class="speech-text1">emotionx.piet@gmail.com</span>
+          </div>
+          <div class="speech-separator"></div>
+          <div class="speech-container06">
+            <span class="speech-text2 bodySmall">
+              © 2024 AK Productions, All Rights Reserved.
+            </span>
+            <div class="speech-container07">
+              <div class="speech-container08">
+                <a
+                  href="https://www.linkedin.com/in/akshat2223"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="speech-link"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="speech-icon">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/karishmajain124"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="speech-link1"
+                >
+                  <svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="speech-icon2"
+                  >
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/mehak-goel-265184228"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="speech-link2"
+                >
+                  <svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="speech-icon4"
+                  >
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/drishti-sharma-bb69a722b"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="speech-link3"
+                >
+                  <svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="speech-icon6"
+                  >
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="speech-container09">
+            <span class="speech-text3">Akshat</span>
+            <span class="speech-text4">Karishma</span>
+            <span class="speech-text5">Mehak</span>
+            <span class="speech-text6">Drishti</span>
+          </div>
+        </footer>
       </div>
     </div>
     <script
@@ -750,4 +930,4 @@
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
   </body>
-</html>
+</html

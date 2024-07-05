@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>404 - Not Found</title>
+    <title>Speech - DER Project</title>
+    <meta property="og:title" content="Speech - DER Project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -715,6 +716,7 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
       @keyframes fade-in-left {
         0% {
@@ -726,28 +728,487 @@
           transform: translateX(0);
         }
       }
-    </style>
+    </style>  
   </head>
   <body>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <div>
-      <link href="{{ url_for('static', filename='css/404.css') }}" rel="stylesheet" />
+      <link href="{{ url_for('static', filename='css/speech.css') }}" rel="stylesheet" />
 
-      <div class="not-found-container">
-        <h3>OOPS! PAGE NOT FOUND</h3>
-        <div class="not-found-container1">
-          <h1 class="not-found-text1">404</h1>
+      <div class="speech-container">
+        <header
+          data-thq="thq-navbar"
+          class="speech-navbar-interactive navbarContainer"
+        >
+          <span class="logo">EMOTIONX</span>
+          <div data-thq="thq-navbar-nav" class="speech-desktop-menu">
+            <nav class="speech-links">
+              <a href="{{url_for('home1')}}" class="speech-nav12 bodySmall buttonFilled">
+                Home
+              </a>
+              <span class="speech-nav42 bodySmall buttonFilled">
+                Face Recognition
+              </span>
+              <a href="{{url_for('speech_emotion')}}" class="speech-nav52 buttonFilled bodySmall">
+                Speech Recognition
+              </a>
+              <a href="{{url_for('team')}}" class="speech-nav32 bodySmall buttonFilled">
+                Team
+              </a>
+              <a href="{{url_for('about')}}" class="speech-nav22 bodySmall buttonFilled">
+                About
+              </a>
+            </nav>
+          </div>
+          <div data-thq="thq-burger-menu" class="speech-burger-menu">
+            <nav class="speech-links1">
+              <a href="{{url_for('home1')}}" class="speech-nav121 buttonFilled bodySmall">
+                Home
+              </a>
+              <a href="{{url_for('face_emotion')}}" class="speech-nav421 bodySmall buttonFilled">
+                Face Recognition
+              </a>
+              <a
+                href="{{url_for('speech_emotion')}}"
+                class="speech-nav521 buttonFilled bodySmall"
+              >
+                Speech Recognition
+              </a>
+              <a href="{{url_for('team')}}" class="speech-nav321 bodySmall buttonFilled">
+                Team
+              </a>
+              <a href="{{url_for('about')}}" class="speech-nav221 bodySmall buttonFilled">
+                About
+              </a>
+            </nav>
+          </div>
+          <div
+            data-thq="thq-mobile-menu"
+            class="speech-mobile-menu1 mobileMenu"
+          >
+            <nav class="speech-links2">
+              <a href="{{url_for('home1')}}" class="speech-nav122 bodySmall buttonFilled">
+                Home
+              </a>
+              <span class="speech-nav422 bodySmall buttonFilled">
+                Face Recognition
+              </span>
+              <a
+                href="{{url_for('speech_emotion')}}"
+                class="speech-nav522 bodySmall buttonFilled"
+              >
+                Speech Recognition
+              </a>
+              <a href="{{url_for('team')}}" class="speech-nav322 bodySmall buttonFilled">
+                Team
+              </a>
+              <a href="{{url_for('about')}}" class="speech-nav222 bodySmall buttonFilled">
+                About
+              </a>
+            </nav>
+          </div>
+        </header>
+        <div class="speech-hero heroContainer">
+          <div class="speech-container01">
+            <h1 class="speech-hero-heading heading1">
+              Speech Emotion Recognition
+            </h1>
+          </div>
         </div>
-        <div class="not-found-container2">
-          <h2 class="not-found-text2">
-            WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND
-          </h2>
+        <div class="speech-container02">
+          <img
+            alt="image"
+            src="static/public/external/voice-300h.webp"
+            loading="eager"
+            class="speech-image"
+          />
         </div>
+        <div class="speech-container03">
+            <div class="speech-container04">
+                <button id="startRec" type="button" class="speech-button button">
+                    Record
+                </button>
+                <button id="stopRec" type="button" class="speech-button1 button" disabled>
+                    Stop
+                </button>
+                <button id="pred" type="button" class="speech-button2 button" disabled>
+                    Predict Emotion
+                </button>
+            </div>
+            <div id="output" class="rounded border m-2 p-2" style="display: none;"></div>
+            <audio id="audioPlayback" controls hidden></audio>
+        </div>
+        <footer class="speech-footer footerContainer">
+          <div class="speech-container05"></div>
+          <span class="speech-logo1 logo">EMOTIONX</span>
+          <nav class="speech-nav">
+            <a href="{{url_for('home1')}}"class="speech-navlink">Home</a>
+            <a href="{{url_for('face_emotion')}}" class="speech-navlink1">Face Recogniton</a>
+            <a href="{{url_for('speech_emotion')}}" class="speech-navlink2">Speech Recognition</a>
+            <a href="{{url_for('team')}}" class="speech-navlink3">Team</a>
+            <a href="{{url_for('about')}}" class="speech-navlink4">About</a>
+          </nav>
+          <div class="speech-contact">
+            <span class="speech-text">Contact Us:-</span>
+            <span class="speech-text1">emotionx.piet@gmail.com</span>
+          </div>
+          <div class="speech-separator"></div>
+          <div class="speech-container06">
+            <span class="speech-text2 bodySmall">
+              © 2024 AK Productions, All Rights Reserved.
+            </span>
+            <div class="speech-container07">
+              <div class="speech-container08">
+                <a
+                  href="https://www.linkedin.com/in/akshat2223"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="speech-link"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="speech-icon">
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/karishmajain124"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="speech-link1"
+                >
+                  <svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="speech-icon2"
+                  >
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/mehak-goel-265184228"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="speech-link2"
+                >
+                  <svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="speech-icon4"
+                  >
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/drishti-sharma-bb69a722b"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="speech-link3"
+                >
+                  <svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="speech-icon6"
+                  >
+                    <path
+                      d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="speech-container09">
+            <span class="speech-text3">Akshat</span>
+            <span class="speech-text4">Karishma</span>
+            <span class="speech-text5">Mehak</span>
+            <span class="speech-text6">Drishti</span>
+          </div>
+        </footer>
       </div>
     </div>
     <script
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+    <script>
+      let mediaRecorder;
+      let audioChunks = [];
+
+      document.getElementById('startRec').addEventListener('click', function() {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(stream => {
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.start();
+            document.getElementById('stopRec').disabled = false;
+            document.getElementById('startRec').disabled = true;
+
+            mediaRecorder.addEventListener("dataavailable", event => {
+              audioChunks.push(event.data);
+            });
+
+            mediaRecorder.addEventListener("stop", () => {
+              const audioBlob = new Blob(audioChunks, { type: 'audio/mp3' });
+              const audioUrl = URL.createObjectURL(audioBlob);
+              const audio = document.getElementById('audioPlayback');
+              audio.src = audioUrl;
+              audio.hidden = false;
+              document.getElementById('pred').disabled = false;
+              // Automstically download the audio file
+              downloadAudio(audioBlob);
+            });
+          });
+      });
+
+      document.getElementById('stopRec').addEventListener('click', function() {
+        mediaRecorder.stop();
+        document.getElementById('stopRec').disabled = true;
+        document.getElementById('startRec').disabled = false;
+        audioChunks = [];
+      });
+
+      function downloadAudio(blob) {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.style.display = "none";
+          a.href = url;
+          a.download = "recording.mp3";
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+      }
+
+      document.getElementById('pred').addEventListener('click', function() {
+        const audioBlob = new Blob(audioChunks);
+        sendAudioToServer(audioBlob);
+        audioChunks = [];
+        document.getElementById('pred').disabled = true;
+        document.getElementById('output').style.display='block';
+      });
+
+      function sendAudioToServer(audioBlob) {
+          const formData = new FormData();
+          formData.append("audio", audioBlob);
+          fetch("/predict", {
+              method: "POST",
+              body: formData,
+          })
+          .then(response => response.json())
+          .then(data => {
+              // alert("Emotion Detected: " + data.emotion);
+              document.getElementById('output').innerHTML =` <b>Predicted Emotion: </b>` + data.emotion;
+          });
+      }
+
+      // function uploadAudio(blob) {
+      //     const formData = new FormData();
+      //     formData.append("file", blob, "recording.mp3");
+      //     fetch('/predict_emotion', { method: "POST", body: formData })
+      //         .then(response => response.json())
+      //         .then(data => {
+      //             console.log('Success:', data);
+      //             displayEmotion(data.emotion);
+      //         })
+      //         .catch((error) => {
+      //             console.error('Error:', error);
+      //         });
+      // }
+
+// Replace downloadAudio with uploadAudio in the stop event listener.
+
+      // document.getElementById('pred').addEventListener('click', function() {
+      //   const audioBlob = new Blob(audioChunks, { type:'audio/mp3' });
+      //   const formData = new FormData();
+      //   formData.append("audio", audioBlob, "recording.mp3");
+
+      //   fetch('/predict_emotion', {
+      //       method: 'POST',
+      //       body: formData,
+      //   })
+      //   .then(response => response.json())
+      //   .then(data => {
+      //       console.log(data);  // Debug: Log the data received from the server
+      //       if (data.emotion) {
+      //           document.getElementById('output').textContent = 'Predicted Emotion: ' + data.emotion;
+      //       } else {
+      //           document.getElementById('output').textContent = 'Error: Emotion not detected';
+      //       }
+      //   })
+      //   .catch(error => {
+      //       console.error('Error:', error);
+      //   });
+
+
+      //   // Clear the previous recordings
+      //   audioChunks = [];
+      // });
+
+      // document.getElementById('pred').addEventListener('click', function() {
+      //   // Assuming that the server expects a filename and knows to look in the uploads folder
+      //   const filename = "recording.wav"; // This filename should match the one used during the saving process on the server
+      //   const formData = new FormData();
+      //   formData.append("filename", filename);
+
+      //   fetch('/predict_emotion', {
+      //       method: 'GET',
+      //       body: formData,
+      //   })
+      //   .then(response => {
+      //       if (!response.ok) {
+      //           throw new Error('Network response was not ok: ' + response.statusText);
+      //       }
+      //       return response.json();
+      //   })
+      //   .then(data => {
+      //       console.log(data);  // Debug: Log the data received from the server
+      //       if (data.emotion) {
+      //           document.getElementById('output').textContent = 'Predicted Emotion: ' + data.emotion;
+      //       } else {
+      //           document.getElementById('output').textContent = 'Error: Emotion not detected';
+      //       }
+      //   })
+      //   .catch(error => {
+      //       console.error('Error:', error);
+      //       document.getElementById('output').textContent = 'Error processing the audio file';
+      //   });
+      // });
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script>
+      const recordButton = document.getElementById('startRec');
+      const stopButton = document.getElementById('stopRec');
+      const predictButton = document.getElementById('pred');
+      const output = document.getElementById('output');
+
+      let recognition;
+
+      // Initialize SpeechRecognition object
+      if ('webkitSpeechRecognition' in window) {
+        recognition = new webkitSpeechRecognition();
+      } else {
+        recognition = new SpeechRecognition();
+      }
+      recognition.continuous = true;
+      recognition.lang = 'en-US';
+
+      let audioBlob; // Declare this outside to make it accessible for the 'Predict Emotion' event listener
+
+      recordButton.addEventListener('click', function() {
+          navigator.mediaDevices.getUserMedia({ audio: true })
+              .then(function(stream) {
+                  const mediaRecorder = new MediaRecorder(stream);
+                  let audioChunks = []; // Reset chunks on new recording
+                  mediaRecorder.start();
+                  output.textContent = 'Recording...';
+
+                  mediaRecorder.addEventListener('dataavailable', function(event) {
+                      audioChunks.push(event.data);
+                  });
+
+                  stopButton.onclick = function() {
+                      mediaRecorder.stop();
+                      output.textContent = 'Recording stopped. Click "Predict Emotion" to analyze.';
+                  };
+
+                  mediaRecorder.onstop = function() {
+                      audioBlob = new Blob(audioChunks, {type: 'audio/wav'});
+                      const audioUrl = URL.createObjectURL(audioBlob);
+                      const audio = new Audio(audioUrl);
+                      audio.controls = true;
+                      output.appendChild(audio);
+                      predictButton.disabled = false; // Enable predict button after recording is stopped
+                  };
+              })
+              .catch(function(error) {
+                  console.error('Error accessing microphone:', error);
+                  output.textContent = 'Error accessing microphone: ' + error.message;
+              });
+      });
+
+      // Modify this for sending the audio blob to the backend for emotion prediction
+      predictButton.addEventListener('click', function() {
+          const formData = new FormData();
+          formData.append('audio', audioBlob, 'recording.wav');
+          
+          fetch('/predict', {
+              method: 'POST',
+              body: formData,
+          })
+          .then(response => response.json())
+          .then(data => {
+              output.textContent = `Predicted Emotion: ${data.emotion}`;
+          })
+          .catch(error => console.error('Error:', error));
+      });
+
+
+      // recordButton.addEventListener('click', function() {
+      //   navigator.mediaDevices.getUserMedia({ audio: true })
+      //     .then(function(stream) {
+      //       // Start recording sound
+      //       const mediaRecorder = new MediaRecorder(stream);
+      //       mediaRecorder.start();
+      //       output.textContent = 'Recording...';
+
+      //       // Stop recording when stop button is clicked
+      //       stopButton.style.display = 'inline-block';
+      //       stopButton.addEventListener('click', function() {
+      //         mediaRecorder.stop();
+      //         output.textContent = 'Recording stopped.';
+      //       });
+
+      //       // Listen for data available event (when recording is stopped)
+      //       mediaRecorder.addEventListener('dataavailable', function(event) {
+      //         const audioBlob = event.data;
+      //         const audioUrl = URL.createObjectURL(audioBlob);
+      //         const audio = new Audio(audioUrl);
+      //         audio.controls = true;
+      //         output.appendChild(audio);
+      //       });
+      //     })
+      //     .catch(function(error) {
+      //       console.error('Error accessing microphone:', error);
+      //       output.textContent = 'Error accessing microphone: ' + error.message;
+      //     });
+      // });
+
+      // stopButton.addEventListener('click', function() {
+      //   // Stop speech recognition when recording is stopped
+      //   recognition.stop();
+      //   output.textContent = 'Recording stopped.';
+      //   recordButton.style.display = 'inline-block';
+      // });
+
+      // predictButton.addEventListener('click', function() {
+      //   // Implement code to predict emotion
+        
+      //   output.textContent = 'Emotion prediction will be displayed here.';
+      // });
+
+      // recognition.onresult = function(event) {
+      //   const transcript = event.results[event.results.length - 1][0].transcript;
+      //   output.textContent = transcript;
+      // };
+
+      // recognition.onerror = function(event) {
+      //   output.textContent = 'Error occurred in recognition: ' + event.error;
+      // };
+
+      // recognition.onend = function() {
+      //   output.textContent = 'Voice input ended.';
+      // };
+    </script> -->
   </body>
-</html>
+</html
